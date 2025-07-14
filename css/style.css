@@ -1,0 +1,109 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.gallery-item {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation-name: fadeInLeft;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.item-1 {
+    animation-delay: 0.2s;
+}
+
+.item-2 {
+    animation-delay: 0.4s;
+}
+
+.item-3 {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    animation-name: bounce;
+    animation-duration: 0.6s;
+    animation-iteration-count: 1;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.slide-in {
+    animation-name: slideRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.loader {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #007BFF;
+
+    border-top: 4px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
